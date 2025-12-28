@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>বালুয়া জামে মসজিদ - ইসলামাবাদ, সীতাকুন্ড</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Noto+Sans+Bengali:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🕌</text></svg>">
+</head>
+<body>
+    <!-- Loading Spinner -->
+    <div class="loader">
+        <div class="spinner"></div>
+        <p>লোড হচ্ছে...</p>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo-area">
+                <h1><i class="fas fa-mosque"></i> বালুয়া জামে মসজিদ</h1>
+                <p class="subtitle">ইসলামাবাদ, সীতাকুন্ড, চট্টগ্রাম</p>
+            </div>
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li><a href="#home"><i class="fas fa-home"></i> হোম</a></li>
+                    <li><a href="#prayer-times"><i class="fas fa-clock"></i> নামাজের সময়</a></li>
+                    <li><a href="#donation"><i class="fas fa-hand-holding-heart"></i> দান করুন</a></li>
+                    <li><a href="#notice"><i class="fas fa-bullhorn"></i> নোটিশ</a></li>
+                    <li><a href="#gallery"><i class="fas fa-images"></i> গ্যালারি</a></li>
+                    <li><a href="#contact"><i class="fas fa-address-book"></i> যোগাযোগ</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h2>সিয়্যিদুল আ'ইয়াদি ফীদ দুনিয়া ওয়াল আখিরাহ</h2>
+                <p>বিশ্বজগতের জন্য কল্যাণকর স্থাপনা</p>
+                <div class="prayer-time-display">
+                    <div class="current-prayer">
+                        <i class="fas fa-moon"></i>
+                        <span id="current-prayer-name">লোড হচ্ছে...</span>
+                        <span id="current-prayer-time">--:--</span>
+                    </div>
+                    <div class="next-prayer">
+                        <i class="fas fa-clock"></i>
+                        <span>পরবর্তী: <span id="next-prayer-name">লোড হচ্ছে...</span></span>
+                        <span id="next-prayer-countdown">--:--:--</span>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#donation" class="btn-hero"><i class="fas fa-donate"></i> দান করুন</a>
+                    <a href="#notice" class="btn-hero secondary"><i class="fas fa-newspaper"></i> নোটিশ দেখুন</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prayer Times -->
+    <section class="prayer-times" id="prayer-times">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-calendar-alt"></i> আজকের নামাজের সময়সূচী</h2>
+            <div class="date-display">
+                <h3 id="hijri-date">লোড হচ্ছে...</h3>
+                <p id="bangla-date">লোড হচ্ছে...</p>
+                <p id="english-date">লোড হচ্ছে...</p>
+            </div>
+            
+            <div class="prayer-grid" id="prayer-grid">
+                <!-- Loaded by JavaScript -->
+            </div>
+            
+            <div class="api-info">
+                <p><i class="fas fa-info-circle"></i> সময়সূচী গুগল শীট থেকে লাইভ আপডেট হয়</p>
+                <button class="btn-refresh" id="refresh-prayer"><i class="fas fa-sync-alt"></i> রিফ্রেশ করুন</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section class="donation" id="donation">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-donate"></i> মসজিদ উন্নয়নে দান করুন</h2>
+            <p class="section-subtitle">"যারা আল্লাহর পথে নিজেদের ধন-সম্পদ ব্যয় করে, তাদের উপমা একটি বীজের মতো যা সাতটি শীষ উৎপন্ন করে; প্রতিটি শীষে একশত দানা। আল্লাহ যাকে ইচ্ছে বহুগুণ বৃদ্ধি করে দেন।" (সূরা বাকারা: ২৬১)</p>
+            
+            <div class="donation-methods">
+                <!-- Loaded by JavaScript -->
+            </div>
+
+            <div class="donation-history">
+                <h3><i class="fas fa-history"></i> সাম্প্রতিক দানসমূহ</h3>
+                <div class="donation-list" id="donation-list">
+                    <!-- Loaded from Google Sheet -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notice Section -->
+    <section class="notice" id="notice">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-bullhorn"></i> নোটিশ ও ঘোষণা</h2>
+            <div class="notice-board" id="notice-board">
+                <!-- Loaded from Google Sheet -->
+            </div>
+            <div class="notice-controls">
+                <button class="btn-notice active" data-type="all">সব</button>
+                <button class="btn-notice" data-type="important">জরুরী</button>
+                <button class="btn-notice" data-type="event">ইভেন্ট</button>
+                <button class="btn-notice" data-type="general">সাধারণ</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-images"></i> মসজিদ গ্যালারি</h2>
+            <div class="gallery-controls">
+                <button class="btn-gallery active" data-category="all">সব ছবি</button>
+                <button class="btn-gallery" data-category="construction">নির্মাণ কাজ</button>
+                <button class="btn-gallery" data-category="jummah">জুমার নামাজ</button>
+                <button class="btn-gallery" data-category="iftar">ইফতার</button>
+                <button class="btn-gallery" data-category="event">ইভেন্ট</button>
+            </div>
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- Loaded from Google Sheet -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-address-book"></i> যোগাযোগ করুন</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>ঠিকানা</h3>
+                            <p id="mosque-address">বালুয়া, ইসলামাবাদ, সীতাকুন্ড, চট্টগ্রাম</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-user-tie"></i>
+                        <div>
+                            <h3>ইমাম সাহেব</h3>
+                            <p id="imam-name">মুফতি মুহাম্মদ আব্দুল্লাহ</p>
+                            <p id="imam-phone">০১৮১২-৩৪৫৬৭৮</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h3>কমিটি সেক্রেটারী</h3>
+                            <p id="secretary-name">মোহাম্মদ আলী</p>
+                            <p id="secretary-phone">০১৭১১-২২৩৩৪৪</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>বার্তা পাঠান</h3>
+                    <form id="message-form">
+                        <input type="text" placeholder="আপনার নাম" required>
+                        <input type="tel" placeholder="মোবাইল নম্বর" required>
+                        <input type="email" placeholder="ইমেইল (ঐচ্ছিক)">
+                        <textarea placeholder="আপনার বার্তা..." rows="4" required></textarea>
+                        <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i> বার্তা পাঠান</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-mosque"></i> বালুয়া জামে মসজিদ</h3>
+                    <p>ইসলামের শিক্ষা ও সম্প্রীতি প্রচারের কেন্দ্র</p>
+                </div>
+                <div class="footer-section">
+                    <h3>লিংক</h3>
+                    <ul>
+                        <li><a href="#home">হোম</a></li>
+                        <li><a href="#prayer-times">নামাজের সময়</a></li>
+                        <li><a href="#donation">দান</a></li>
+                        <li><a href="#notice">নোটিশ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>গুগল শীট লিংক</h3>
+                    <div class="sheet-links">
+                        <a href="#" id="prayer-sheet-link" target="_blank"><i class="fas fa-clock"></i> নামাজের সময়</a>
+                        <a href="#" id="donation-sheet-link" target="_blank"><i class="fas fa-donate"></i> দানের হিসাব</a>
+                        <a href="#" id="notice-sheet-link" target="_blank"><i class="fas fa-bullhorn"></i> নোটিশ</a>
+                        <a href="#" id="gallery-sheet-link" target="_blank"><i class="fas fa-images"></i> গ্যালারি</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> বালুয়া জামে মসজিদ। সর্বস্বত্ব সংরক্ষিত।</p>
+                <p class="dev-credit">Developed with ❤️ for the Muslim Ummah</p>
+                <p class="update-info"><i class="fas fa-sync"></i> ডেটা লাইভ আপডেট: <span id="last-update">লোড হচ্ছে...</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Modal -->
+    <div class="modal" id="imageModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <img id="modal-image" src="" alt="">
+            <div class="modal-caption">
+                <h3 id="modal-title"></h3>
+                <p id="modal-description"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Message -->
+    <div class="toast" id="successToast">
+        <i class="fas fa-check-circle"></i>
+        <span>সফলভাবে সম্পন্ন হয়েছে!</span>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="api.js"></script>
+</body>
+</html>
